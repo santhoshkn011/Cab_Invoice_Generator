@@ -1,7 +1,11 @@
 package com.bridgelabz;
 
 public class InvoiceGenerator {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Cab Invoice Generator Program.");
+    private static final int RS_PER_MINUTE = 1; //min cost per minute
+    private static final double RS_PER_KILOMETER = 10; //min cost per kilometer
+
+    public double calculatefare(double distance , int time) {
+        //calculation of total fare
+        return distance * RS_PER_KILOMETER + time * RS_PER_MINUTE;
     }
 }
